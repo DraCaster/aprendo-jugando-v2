@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Activities from './pages/Activities'
 import Game from './pages/Game'
 import About from './pages/About'
+import gameRoutes from './pages/games/router'
 
 const routes = [
     {name: "home", path: '/', component: Home},
@@ -14,9 +15,11 @@ const routes = [
     {name: "about", path: '/about', component: About},
 ]
 
+const routesMerge = [...routes, ...gameRoutes]
+
 const router = new VueRouter({
     mode: 'history',
-    routes: routes
+    routes: routesMerge
 })
 
 
