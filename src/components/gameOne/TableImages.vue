@@ -4,7 +4,7 @@
         v-for="n in 9"
         :key="n"
         class="d-flex child-flex"
-        cols="4"
+        cols="3"
     >
       <v-img
           :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
@@ -30,6 +30,53 @@
 </template>
 <script>
 export default {
+
+  data() {
+    return {
+      items: [{
+        title: 'espada',
+        letter: 'e',
+        url: '../../../assets/cards/espada.png',
+        sound: ''
+      },
+        {
+          title: 'uno',
+          letter: 'u',
+          url: '../../../assets/cards/uno.png',
+          sound: ''
+        },
+        {
+          title: 'oso',
+          letter: 'o',
+          url: '../../../assets/cards/oso.png',
+          sound: ''
+        },
+        {
+          title: 'aro',
+          letter: 'a',
+          url: '../../../assets/cards/aro.png',
+          sound: ''
+        },
+        {
+          title: 'ola',
+          letter: 'o',
+          url: '../../../assets/cards/ola.png',
+          sound: ''
+        },
+        {
+          title: 'empanadas',
+          letter: 'e',
+          url: '../../../assets/cards/empanadas.png',
+          sound: ''
+        },
+        {
+          title: 'ala',
+          letter: 'a',
+          url: '../../../assets/cards/ala.png',
+          sound: ''
+        }]
+    }
+  }
 
 }
 </script>
