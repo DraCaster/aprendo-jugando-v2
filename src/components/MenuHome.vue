@@ -26,10 +26,11 @@
 
                   <v-card-actions>
                     <v-btn
-                        class="ml-2 mt-5 pulse-button"
+                        class="ml-2 mt-5"
                         outlined
                         rounded
                         small
+                        :to="item.path"
                     >
                       ENTRAR
                     </v-btn>
@@ -67,12 +68,14 @@ export default {
         src: tina2,
         title: 'JUEGOS',
         subtitle: 'NIVEL 1',
+        path:'/activities'
       },
       {
         color: '#9575CD',
         src: paco1,
         title: 'ACERCA DE',
         subtitle: 'INFORMACION DE LA APLICACION',
+        path:'/about'
       },
     ],
   }),
@@ -84,6 +87,7 @@ export default {
 };
 </script>
 <style>
+
 .containerButton {
   width: 100px;
   margin: 0 auto 0;
@@ -91,7 +95,6 @@ export default {
 }
 
 .pulse-button {
-
   position: relative;
   width: 100px;
   height: 100px;

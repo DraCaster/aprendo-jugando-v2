@@ -29,19 +29,19 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-
-    <v-main>
-      <Menu/>
+    <v-main class="wallpaper">
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 <script>
-import Menu from './pages/Menu';
-
 export default {
-  name: 'App',
-  components: {
-    Menu,
-  },
 };
 </script>
+<style>
+.wallpaper{
+  background-image: url('./assets/wallpaper.jpeg');
+  background-repeat: repeat-x;
+}
+</style>
+

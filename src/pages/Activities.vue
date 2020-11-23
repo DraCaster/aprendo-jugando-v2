@@ -24,23 +24,20 @@
             </v-list-item-content>
 
             <v-list-item-action>
-               <Button color="#00BFA5" rounded="true" 
-               :href="activity.path" title="JUGAR" icon="mdi-redo"
-               large="false"/>
+
             </v-list-item-action>
           </v-list-item>
         </v-list>
       </v-card>
     </v-col>
     <v-col cols="12">
-      <Button color="#00BFA5" rounded="true" href="/" title="VOLVER"/>
+
     </v-col>
   </v-row>
 </template>
 <script>
-import Button from "../components/Button";
 export default {
-  components: { Button },
+
   data: () => ({
     activities: [
       {
