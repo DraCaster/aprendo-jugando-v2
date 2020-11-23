@@ -1,8 +1,12 @@
 <template>
-<div>
-    <h1>sdas</h1>
-   
-</div>
+  <v-row>
+    <v-col>
+      <v-card>
+        <h3 class="justify-center">¿QUE VOY A DECIR?</h3>
+      </v-card>
+    </v-col>
+  </v-row>
+
 </template>
 <script>
 export default {
