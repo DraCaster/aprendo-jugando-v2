@@ -2,48 +2,55 @@
   <v-app>
     <v-app-bar
       app
-      color="#e57373"
+      color="primary"
       dark
     >
       <div class="d-flex align-center">
         <v-img
-          alt="App Logo"
+          alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="./assets/logo2.png"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
           transition="scale-transition"
-          width="50"
+          width="40"
         />
 
-        <h3>Aprendo Jugando </h3>
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
       </div>
 
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/dracaster"
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
         text
       >
-        <span class="mr-2">Acerca de</span>
+        <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
 
-    <v-main class="wallpaper">
-  <router-view></router-view>
+    <v-main>
+      <HelloWorld/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-
+import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-   
+    HelloWorld,
   },
 
   data: () => ({
@@ -51,10 +58,3 @@ export default {
   }),
 };
 </script>
-
-<style>
-.wallpaper{
-  background-image: URL('./assets/wallpaper.jpeg');
-  background-repeat: repeat-x;
-}
-</style>

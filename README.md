@@ -1,4 +1,4 @@
-# aprendo-jugando-v2
+# aprendojugando
 
 ## Project setup
 ```
