@@ -1,14 +1,14 @@
 <template>
   <v-row>
     <v-col
-        v-for="n in 9"
-        :key="n"
+        v-for="n in items"
+        :key="n.title"
         class="d-flex child-flex"
         cols="3"
     >
       <v-img
-          :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-          :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+          :src="n.url"
+          :lazy-src="n.url"
           aspect-ratio="1"
           class="grey lighten-2"
       >
@@ -29,6 +29,15 @@
   </v-row>
 </template>
 <script>
+
+import espada from '../../assets/cards/espada.png'
+import uno from '../../assets/cards/uno.png'
+import oso from '../../assets/cards/oso.png'
+import aro from '../../assets/cards/aro.png'
+import ola from '../../assets/cards/ola.png'
+import empanadas from '../../assets/cards/empanadas.png'
+import ala from '../../assets/cards/ala.png'
+
 export default {
 
   data() {
@@ -36,43 +45,43 @@ export default {
       items: [{
         title: 'espada',
         letter: 'e',
-        url: '../../../assets/cards/espada.png',
-        sound: '../../../assets/sounds/words/espada.wav'
+        url: espada,
+        sound: '../../assets/sounds/words/espada.wav'
       },
         {
           title: 'uno',
           letter: 'u',
-          url: '../../../assets/cards/uno.png',
+          url: uno,
           sound: '../../../assets/sounds/words/uno.wav'
         },
         {
           title: 'oso',
           letter: 'o',
-          url: '../../../assets/cards/oso.png',
+          url: oso,
           sound: '../../../assets/sounds/words/oso.wav'
         },
         {
           title: 'aro',
           letter: 'a',
-          url: '../../../assets/cards/aro.png',
+          url: aro,
           sound: '../../../assets/sounds/words/aro.wav'
         },
         {
           title: 'ola',
           letter: 'o',
-          url: '../../../assets/cards/ola.png',
+          url: ola,
           sound: '../../../assets/sounds/words/ola.wav'
         },
         {
           title: 'empanadas',
           letter: 'e',
-          url: '../../../assets/cards/empanadas.png',
+          url: empanadas,
           sound: '../../../assets/sounds/words/empanadas.wav'
         },
         {
           title: 'ala',
           letter: 'a',
-          url: '../../../assets/cards/ala.png',
+          url: ala,
           sound: '../../../assets/sounds/words/ala.wav'
         }]
     }
