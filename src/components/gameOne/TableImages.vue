@@ -37,43 +37,43 @@ export default {
         title: 'espada',
         letter: 'e',
         url: '../../../assets/cards/espada.png',
-        sound: ''
+        sound: '../../../assets/sounds/words/espada.wav'
       },
         {
           title: 'uno',
           letter: 'u',
           url: '../../../assets/cards/uno.png',
-          sound: ''
+          sound: '../../../assets/sounds/words/uno.wav'
         },
         {
           title: 'oso',
           letter: 'o',
           url: '../../../assets/cards/oso.png',
-          sound: ''
+          sound: '../../../assets/sounds/words/oso.wav'
         },
         {
           title: 'aro',
           letter: 'a',
           url: '../../../assets/cards/aro.png',
-          sound: ''
+          sound: '../../../assets/sounds/words/aro.wav'
         },
         {
           title: 'ola',
           letter: 'o',
           url: '../../../assets/cards/ola.png',
-          sound: ''
+          sound: '../../../assets/sounds/words/ola.wav'
         },
         {
           title: 'empanadas',
           letter: 'e',
           url: '../../../assets/cards/empanadas.png',
-          sound: ''
+          sound: '../../../assets/sounds/words/empanadas.wav'
         },
         {
           title: 'ala',
           letter: 'a',
           url: '../../../assets/cards/ala.png',
-          sound: ''
+          sound: '../../../assets/sounds/words/ala.wav'
         }]
     }
   }
