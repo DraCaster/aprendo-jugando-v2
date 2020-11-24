@@ -39,7 +39,6 @@ import empanadas from '../../assets/cards/empanadas.png'
 import ala from '../../assets/cards/ala.png'
 
 export default {
-
   data() {
     return {
       items: [{
