@@ -31,29 +31,38 @@
 
             <v-list-item-action>
               <v-btn
+                  fab
+                  small
               :to="activity.path"
               class="white--text"
-              color="teal">JUGAR
+              color="teal">
                 <v-icon
-                right>
+                >
                   mdi-arrow-right-thick
                 </v-icon>
               </v-btn>
             </v-list-item-action>
           </v-list-item>
         </v-list>
-        <v-card-title class="center">
-          <v-btn to="/" class="white--text" color="teal" large >
-            VOLVER
-            <v-icon
-                right
-                dark
-            >
+      </v-card>
+    </v-col>
+    <v-col cols="12">
+      <v-card class="mx-auto"
+              max-width="100">
+        <v-card-actions>
+          <v-btn
+              class="mx-2"
+              fab
+              dark
+              large
+              color="cyan"
+              to="/"
+          >
+            <v-icon dark>
               mdi-home
             </v-icon>
           </v-btn>
-        </v-card-title>
-
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>
