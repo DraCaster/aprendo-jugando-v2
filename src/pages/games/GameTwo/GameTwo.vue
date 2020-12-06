@@ -11,7 +11,7 @@
       <v-card
           class="mx-auto"
           max-width="500">
-      <h4>en esta seccion  van a estar las imagenes</h4>
+          <TableImages :items="items"/>
       </v-card>
     </v-col>
     <v-col cols="12">
@@ -49,7 +49,74 @@
 
 </template>
 <script>
+import TableImages from '../../../components/TableImages/TableImages'
+import auto from '../../../assets/cards/auto.png'
+import espejo from '../../../assets/cards/espejo.png'
+import arania from '../../../assets/cards/arania.png'
+import escoba from '../../../assets/cards/escoba.png'
+import anana from '../../../assets/cards/anana.png'
+import empanada from '../../../assets/cards/empanadas.png'
+import elefante from '../../../assets/cards/elefante.png'
+import aro from '../../../assets/cards/aro.png'
+
 export default {
+  components:{
+    TableImages
+  },
+    data(){
+      return {
+        items: [
+          {
+            title: 'auto',
+            letter: 'a',
+            url: auto,
+            sound: ''
+          },
+          {
+            title: 'espejo',
+            letter: 'e',
+            url: espejo,
+            sound: ''
+          },
+          {
+            title: 'arania',
+            letter: 'a',
+            url: arania,
+            sound: ''
+          },
+          {
+            title: 'escoba',
+            letter: 'e',
+            url: escoba,
+            sound: ''
+          },
+          {
+            title: 'anana',
+            letter: 'a',
+            url: anana,
+            sound: ''
+          },
+          {
+            title: 'empanada',
+            letter: 'e',
+            url: empanada,
+            sound: ''
+          },
+          {
+            title: 'elefante',
+            letter: 'e',
+            url: elefante,
+            sound: ''
+          },
+          {
+            title: 'aro',
+            letter: 'a',
+            url: aro,
+            sound: ''
+          }
+        ]
+      }
+    }
     
 }
 </script>
