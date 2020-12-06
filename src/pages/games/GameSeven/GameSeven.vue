@@ -1,12 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="400">
-        <v-card-title class="justify-center">ARMAR PAREJAS</v-card-title>
-      </v-card>
-    </v-col>
+    <Header title="ARMAR PAREJAS"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"

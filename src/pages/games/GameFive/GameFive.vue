@@ -1,12 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="400">
-        <v-card-title class="justify-center">EL TREN</v-card-title>
-      </v-card>
-    </v-col>
+    <Header title="EL TREN"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"
@@ -62,9 +56,11 @@ import incendio from '../../../assets/cards/incendio.png'
 import anteojos from '../../../assets/cards/anteojos.png'
 import uno from '../../../assets/cards/uno.png'
 import indio from '../../../assets/cards/indio.png'
+import Header from "../../../components/Header/Header";
 
 export default {
   components:{
+    Header,
     TableImages
   },
     data(){

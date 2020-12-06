@@ -1,12 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="400">
-        <v-card-title class="justify-center">AGRUPAR</v-card-title>
-      </v-card>
-    </v-col>
+    <Header title="AGRUPAR"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"
@@ -50,6 +44,8 @@
 </template>
 <script>
 import TableImages from '../../../components/TableImages/TableImages'
+import Header from "../../../components/Header/Header"
+
 import auto from '../../../assets/cards/auto.png'
 import espejo from '../../../assets/cards/espejo.png'
 import arania from '../../../assets/cards/arania.png'
@@ -61,7 +57,8 @@ import aro from '../../../assets/cards/aro.png'
 
 export default {
   components:{
-    TableImages
+    TableImages,
+    Header
   },
     data(){
       return {

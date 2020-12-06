@@ -1,12 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="400">
-        <v-card-title class="justify-center">ARMAR PAREJAS</v-card-title>
-      </v-card>
-    </v-col>
+    <Header title="ARMAR PAREJAS"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"
@@ -60,8 +54,10 @@ import espejo from '../../../assets/cards/espejo.png'
 import utiles from '../../../assets/cards/utiles.png'
 import uniforme from '../../../assets/cards/uniforme.png'
 import arania from '../../../assets/cards/arania.png'
+import Header from "../../../components/Header/Header";
 export default {
   components:{
+    Header,
     TableImages
   },
     data() {

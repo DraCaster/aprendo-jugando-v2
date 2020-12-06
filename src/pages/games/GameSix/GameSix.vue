@@ -1,12 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="400">
-        <v-card-title class="justify-center">EL PUEBLO MANDA</v-card-title>
-      </v-card>
-    </v-col>
+    <Header title="EL PUEBLO MANDA"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"
@@ -61,9 +55,11 @@ import nariz from '../../../assets/cards/nariz.png'
 import reloj from '../../../assets/cards/reloj.png'
 import volcan from '../../../assets/cards/volcan.png'
 import mono from '../../../assets/cards/mono.png'
+import Header from "../../../components/Header/Header";
 
 export default {
   components:{
+    Header,
     TableImages
   },
     data() {

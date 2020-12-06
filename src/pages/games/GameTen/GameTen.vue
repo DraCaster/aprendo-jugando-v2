@@ -1,12 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="400">
-        <v-card-title class="justify-center">-</v-card-title>
-      </v-card>
-    </v-col>
+    <Header title="-"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"
@@ -49,7 +43,8 @@
 
 </template>
 <script>
+import Header from "../../../components/Header/Header";
 export default {
-    
+  components: {Header}
 }
 </script>

@@ -1,12 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="400">
-        <v-card-title class="justify-center">¿EN QUE FILA VAN?</v-card-title>
-      </v-card>
-    </v-col>
+    <Header title="¿EN QUE FILA VAN?"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"
@@ -62,9 +56,11 @@ import montania from '../../../assets/cards/montania.png'
 import murcielago from '../../../assets/cards/murcielago.png'
 import mochila from '../../../assets/cards/mochila.png'
 import manzana from '../../../assets/cards/manzana.png'
+import Header from "../../../components/Header/Header";
 
 export default {
   components:{
+    Header,
       TableImages
   },
     data() {
