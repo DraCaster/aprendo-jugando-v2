@@ -1,13 +1,13 @@
-import GameOne from "./GameOne";
-import GameTwo from "./GameTwo";
-import GameThree from "./GameThree";
-import GameFour from "./GameFour";
-import GameFive from "./GameFive";
-import GameSix from "./GameSix";
-import GameSeven from "./GameSeven";
-import GameEight from "./GameEight";
-import GameNine from "./GameNine";
-import GameTen from "./GameTen";
+import GameOne from "./GameOne/GameOne";
+import GameTwo from "./GameTwo/GameTwo";
+import GameThree from "./GameThree/GameThree";
+import GameFour from "./GameFour/GameFour";
+import GameFive from "./GameFive/GameFive";
+import GameSix from "./GameSix/GameSix";
+import GameSeven from "./GameSeven/GameSeven";
+import GameEight from "./GameEight/GameEight";
+import GameNine from "./GameNine/GameNine";
+import GameTen from "./GameTen/GameTen";
 
 const gameRoutes = [
   { name: "gameOne", path: "/gameone", component: GameOne },
