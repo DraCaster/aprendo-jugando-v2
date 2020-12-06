@@ -83,6 +83,4 @@ export default {
 .paint {
   border: 5px solid #e25b2a;
 }
-
-
 </style>
