@@ -27,17 +27,21 @@
 </template>
 <script>
 import TableImages from '../../../components/TableImages/TableImages'
-import mago from '../../../assets/cards/mago.png'
-import nido from '../../../assets/cards/nido.png'
-import nena from '../../../assets/cards/nena.png'
-import moto from '../../../assets/cards/moto.png'
-import nube from '../../../assets/cards/nube.png'
-import moneda from '../../../assets/cards/moneda.png'
-import raton from '../../../assets/cards/raton.png'
-import suma from '../../../assets/cards/suma.png'
-import nudo from '../../../assets/cards/nudo.png'
 import Header from "../../../components/Header/Header";
 import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+
+//Images
+import {
+  mago,
+  nido,
+  nena,
+  moto,
+  nube,
+  moneda,
+  raton,
+  suma,
+  nudo
+} from '../../../helpers/images'
 
 export default {
   components:{
@@ -52,54 +56,63 @@ export default {
             title: 'mago',
             letter: 'm',
             url: mago,
+            selected: false,
             sound: ''
           },
           {
             title: 'nido',
             letter: 'n',
             url: nido,
+            selected: false,
             sound: ''
           },
           {
             title: 'nena',
             letter: 'n',
             url: nena,
+            selected: false,
             sound: ''
           },
           {
             title: 'moto',
             letter: 'm',
             url: moto,
+            selected: false,
             sound: ''
           },
           {
             title: 'nube',
             letter: 'n',
             url: nube,
+            selected: false,
             sound: ''
           },
           {
             title: 'moneda',
             letter: 'm',
             url: moneda,
+            selected: false,
             sound: ''
           },
           {
             title: 'raton',
             letter: 'r',
             url: raton,
+            selected: false,
             sound: ''
           },
           {
             title: 'suma',
             letter: 's',
             url: suma,
+            selected: false,
             sound: ''
           },
           {
             title: 'nudo',
             letter: 'n',
             url: nudo,
+            selected: false,
             sound: ''
           }
         ]

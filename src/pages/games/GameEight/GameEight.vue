@@ -27,26 +27,30 @@
 </template>
 <script>
 import TableImages from '../../../components/TableImages/TableImages'
-import rueda from '../../../assets/cards/rueda.png'
-import ropa from '../../../assets/cards/ropa.png'
-import regalo from '../../../assets/cards/regalo.png'
-import rana from '../../../assets/cards/rana.png'
-import raton from '../../../assets/cards/raton.png'
-import serpiente from '../../../assets/cards/serpiente.png'
-import sarten from '../../../assets/cards/sarten.png'
-import sol from '../../../assets/cards/sol.png'
-import montania from '../../../assets/cards/montania.png'
-import murcielago from '../../../assets/cards/murcielago.png'
-import mochila from '../../../assets/cards/mochila.png'
-import manzana from '../../../assets/cards/manzana.png'
 import Header from "../../../components/Header/Header";
 import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+
+//Images
+import {
+  rueda,
+  ropa,
+  regalo,
+  rana,
+  raton,
+  serpiente,
+  sarten,
+  sol,
+  montania,
+  murcielago,
+  mochila,
+  manzana
+} from '../../../helpers/images'
 
 export default {
   components:{
     ButtonHome,
     Header,
-      TableImages
+    TableImages
   },
     data() {
       return {
@@ -55,72 +59,84 @@ export default {
             title: 'rueda',
             letter: 'r',
             url: rueda,
+            selected: false,
             sound: ''
           },
           {
             title: 'ropa',
             letter: 'r',
             url: ropa,
+            selected: false,
             sound: ''
           },
           {
             title: 'regalo',
             letter: 'r',
             url: regalo,
+            selected: false,
             sound: ''
           },
           {
             title: 'rana',
             letter: 'r',
             url: rana,
+            selected: false,
             sound: ''
           },
           {
             title: 'raton',
             letter: 'r',
             url: raton,
+            selected: false,
             sound: ''
           },
           {
             title: 'serpiente',
             letter: 's',
             url: serpiente,
+            selected: false,
             sound: ''
           },
           {
             title: 'sarten',
             letter: 's',
             url: sarten,
+            selected: false,
             sound: ''
           },
           {
             title: 'sol',
             letter: 's',
             url: sol,
+            selected: false,
             sound: ''
           },
           {
             title: 'montania',
             letter: 'm',
             url: montania,
+            selected: false,
             sound: ''
           },
           {
             title: 'murcielago',
             letter: 'm',
             url: murcielago,
+            selected: false,
             sound: ''
           },
           {
             title: 'mochila',
             letter: 'm',
             url: mochila,
+            selected: false,
             sound: ''
           },
           {
             title: 'manzana',
             letter: 'm',
             url: manzana,
+            selected: false,
             sound: ''
           }
         ]
