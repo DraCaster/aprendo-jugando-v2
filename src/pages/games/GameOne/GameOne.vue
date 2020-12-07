@@ -8,17 +8,29 @@
           max-width="173">
         <v-card-actions>
           <ButtonHome/>
-          <v-btn
-              class="mx-2"
-              fab
-              dark
-              large
-              color="green"
-          >
-            <v-icon dark>
-              mdi-check
-            </v-icon>
-          </v-btn>
+
+          <v-dialog :value="activateModal" max-width="500">
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                  class="mx-2"
+                  fab
+                  dark
+                  v-bind="attrs"
+                  v-on="on"
+                  large
+                  color="green"
+                  @click="checkGame"
+              >
+                <v-icon dark>
+                  mdi-check
+                </v-icon>
+              </v-btn>
+            </template>
+            <Dialog :dialog="activateModal"
+                    :pathImg="modalImg"
+                    :title="modalTitle"
+                    v-on:closeDialog="closeDialog"/>
+          </v-dialog>
         </v-card-actions>
       </v-card>
     </v-col>
@@ -28,6 +40,7 @@
 import TableImages from '../../../components/TableImages/TableImages'
 import Header from "../../../components/Header/Header";
 import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+import Dialog from "../../../components/Dialog/Dialog";
 
 //Images
 import {
@@ -37,11 +50,13 @@ import {
   aro,
   ola,
   empanadas,
-  ala
+  ala,
+  happyface,
+  sadface
 } from '../../../helpers/images'
 
 //Sounds
-import{
+import {
   espadaSound,
   unoSound,
   osoSound,
@@ -52,15 +67,21 @@ import{
   gameTitleOne
 } from '../../../helpers/sounds'
 
+
 export default {
   components: {
+    Dialog,
     ButtonHome,
     TableImages,
     Header
   },
   data() {
     return {
+      modalImg: null,
+      modalTitle: null,
+      result: true,
       gameTitlePath: gameTitleOne,
+      activateModal: false,
       items: [
         {
           id: 0,
@@ -120,10 +141,24 @@ export default {
         }]
     }
   },
-  methods:{
-    checkGame(){
-      console.log('lala')
-    }
+  methods: {
+    checkGame() {
+      this.result = this.items.find(item => item.selected === true)
+
+      console.log('items: ',this.items)
+      if (this.result) {
+        this.modalImg = happyface
+        this.modalTitle = "¡MUY BIEN!"
+      } else {
+        this.modalImg = sadface
+        this.modalTitle = "UPS! TE EQUIVOCASTE!"
+      }
+      this.activateModal = true
+    },
+    closeDialog() {
+      this.activateModal = false
+    },
+
   }
 }
 </script>

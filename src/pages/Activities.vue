@@ -164,13 +164,10 @@ export default {
   animation-iteration-count: 3;
   animation-name: slideDownBtn;
   -webkit-animation-name: slideDownBtn;
-
   animation-duration: 1s;
   -webkit-animation-duration: 1s;
-
   animation-timing-function: ease;
   -webkit-animation-timing-function: ease;
-
   visibility: visible !important;
 }
 
