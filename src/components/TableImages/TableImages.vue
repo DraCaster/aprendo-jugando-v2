@@ -1,35 +1,41 @@
 <template>
-  <v-row>
-    <v-col
-        v-for="item in images"
-        :key="item.id"
-        class="d-flex child-flex"
-        cols="3"
-    >
-      <v-img
-          :src="item.url"
-          :lazy-src="item.url"
-          aspect-ratio="1"
-          :class="{'paint': item.selected}"
-          v-on:click="
+  <v-col cols="12">
+    <v-card
+        class="mx-auto"
+        max-width="500">
+      <v-row>
+        <v-col
+            v-for="item in images"
+            :key="item.id"
+            class="d-flex child-flex"
+            cols="3"
+        >
+          <v-img
+              :src="item.url"
+              :lazy-src="item.url"
+              aspect-ratio="1"
+              :class="{'paint': item.selected}"
+              v-on:click="
           selectItem(images,item);
           removePainted(item)"
-      >
-        <template v-slot:placeholder>
-          <v-row
-              class="fill-height ma-0"
-              align="center"
-              justify="center"
           >
-            <v-progress-circular
-                indeterminate
-                color="grey lighten-5"
-            ></v-progress-circular>
-          </v-row>
-        </template>
-      </v-img>
-    </v-col>
-  </v-row>
+            <template v-slot:placeholder>
+              <v-row
+                  class="fill-height ma-0"
+                  align="center"
+                  justify="center"
+              >
+                <v-progress-circular
+                    indeterminate
+                    color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
+        </v-col>
+      </v-row>
+    </v-card>
+  </v-col>
 </template>
 <script>
 

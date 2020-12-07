@@ -1,13 +1,7 @@
 <template>
   <v-row>
     <Header title="¿EN QUE FILA VAN?"/>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="500">
-          <TableImages :items="items"/>
-      </v-card>
-    </v-col>
+    <TableImages :items="items"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"

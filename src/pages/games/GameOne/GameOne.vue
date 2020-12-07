@@ -1,17 +1,11 @@
 <template>
   <v-row>
     <Header title="¿QUE VOY A DECIR?" :sound-title="gameTitlePath"/>
+    <TableImages :items="items"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"
-          max-width="500">
-          <TableImages :items="items"/>
-      </v-card>
-    </v-col>
-    <v-col cols="12">
-      <v-card
-        class="mx-auto"
-        max-width="173">
+          max-width="173">
         <v-card-actions>
           <v-btn
               class="mx-2"
@@ -56,24 +50,25 @@ import ala from '../../../assets/cards/ala.png'
 
 //Sounds
 import espadaSound from '../../../assets/sounds/words/espada.wav'
-import unoSound from  '../../../assets/sounds/words/uno.wav'
+import unoSound from '../../../assets/sounds/words/uno.wav'
 import osoSound from '../../../assets/sounds/words/oso.wav'
 import aroSound from '../../../assets/sounds/words/aro.wav'
 import olaSound from '../../../assets/sounds/words/ola.wav'
 import empanadasSound from '../../../assets/sounds/words/empanada.wav'
 import alaSound from '../../../assets/sounds/words/ala.wav'
 import gameTitle from '../../../assets/sounds/gameTitles/game-one.wav'
+
 export default {
- components:{
-   TableImages,
-   Header
- },
+  components: {
+    TableImages,
+    Header
+  },
   data() {
     return {
       gameTitlePath: gameTitle,
       items: [
         {
-          id:0,
+          id: 0,
           title: 'espada',
           letter: 'e',
           url: espada,
@@ -81,7 +76,7 @@ export default {
           sound: espadaSound
         },
         {
-          id:1,
+          id: 1,
           title: 'uno',
           letter: 'u',
           url: uno,
@@ -89,7 +84,7 @@ export default {
           sound: unoSound
         },
         {
-          id:2,
+          id: 2,
           title: 'oso',
           letter: 'o',
           url: oso,
@@ -97,7 +92,7 @@ export default {
           sound: osoSound
         },
         {
-          id:3,
+          id: 3,
           title: 'aro',
           letter: 'a',
           url: aro,
@@ -105,7 +100,7 @@ export default {
           sound: aroSound
         },
         {
-          id:4,
+          id: 4,
           title: 'ola',
           letter: 'o',
           url: ola,
@@ -113,7 +108,7 @@ export default {
           sound: olaSound
         },
         {
-          id:5,
+          id: 5,
           title: 'empanadas',
           letter: 'e',
           url: empanadas,
@@ -121,13 +116,14 @@ export default {
           sound: empanadasSound
         },
         {
-          id:6,
+          id: 6,
           title: 'ala',
           letter: 'a',
           url: ala,
           selected: false,
           sound: alaSound
         }]
-    }}
+    }
+  }
 }
 </script>
