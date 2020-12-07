@@ -29,6 +29,8 @@
             <Dialog :dialog="activateModal"
                     :pathImg="modalImg"
                     :title="modalTitle"
+                    pathNextGame="/gamethree"
+                    :activateNextGame="activateNextGame"
                     v-on:closeDialog="closeDialog"/>
           </v-dialog>
         </v-card-actions>
@@ -72,6 +74,7 @@ export default {
       result: true,
       gameTitlePath: gameTitleOne,
       activateModal: false,
+      activateNextGame: false,
       items: [
         {
           title: 'auto',
@@ -140,9 +143,11 @@ export default {
       if (this.result) {
         this.modalImg = happyface
         this.modalTitle = "¡MUY BIEN!"
+        this.activateNextGame = true
       } else {
         this.modalImg = sadface
         this.modalTitle = "UPS! TE EQUIVOCASTE!"
+        this.activateNextGame = false
       }
       this.activateModal = true
     },
