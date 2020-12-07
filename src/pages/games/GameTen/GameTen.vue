@@ -1,12 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="400">
-        <v-card-title class="justify-center">-</v-card-title>
-      </v-card>
-    </v-col>
+    <Header title="-"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"
@@ -19,18 +13,7 @@
           class="mx-auto"
           max-width="173">
         <v-card-actions>
-          <v-btn
-              class="mx-2"
-              fab
-              dark
-              large
-              color="cyan"
-              to="/"
-          >
-            <v-icon dark>
-              mdi-home
-            </v-icon>
-          </v-btn>
+          <ButtonHome/>
           <v-btn
               class="mx-2"
               fab
@@ -49,7 +32,9 @@
 
 </template>
 <script>
+import Header from "../../../components/Header/Header";
+import ButtonHome from "../../../components/ButtonHome/ButtonHome";
 export default {
-    
+  components: {ButtonHome, Header}
 }
 </script>

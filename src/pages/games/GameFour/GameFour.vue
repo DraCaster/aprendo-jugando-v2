@@ -1,36 +1,13 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="400">
-        <v-card-title class="justify-center">NAIPES</v-card-title>
-      </v-card>
-    </v-col>
-    <v-col cols="12">
-      <v-card
-          class="mx-auto"
-          max-width="500">
-          <TableImages :items="items"/>
-      </v-card>
-    </v-col>
+    <Header title="NAIPES"/>
+    <TableImages :items="items"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"
           max-width="173">
         <v-card-actions>
-          <v-btn
-              class="mx-2"
-              fab
-              dark
-              large
-              color="cyan"
-              to="/"
-          >
-            <v-icon dark>
-              mdi-home
-            </v-icon>
-          </v-btn>
+          <ButtonHome/>
           <v-btn
               class="mx-2"
               fab
@@ -60,9 +37,13 @@ import arbol from '../../../assets/cards/arbol.png'
 import ala from '../../../assets/cards/ala.png'
 import oso from '../../../assets/cards/oso.png'
 import oreja from '../../../assets/cards/oreja.png'
+import Header from "../../../components/Header/Header";
+import ButtonHome from "../../../components/ButtonHome/ButtonHome";
 
 export default {
   components:{
+    ButtonHome,
+    Header,
     TableImages
   },
     data() {

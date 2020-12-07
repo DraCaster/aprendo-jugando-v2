@@ -3,8 +3,10 @@
     <v-col cols="12">
       <v-card max-width="600" class="mx-auto">
         <v-card-title>ELEGI UNA OPCION
-          <v-avatar>
+          <v-avatar
+          class="slideDownBtn">
             <img
+                class="slideDownBtn"
                 src="../assets/arrowbottom.png"
                 alt="arrow"
             >
@@ -50,26 +52,16 @@
       <v-card class="mx-auto"
               max-width="100">
         <v-card-actions>
-          <v-btn
-              class="mx-2"
-              fab
-              dark
-              large
-              color="cyan"
-              to="/"
-          >
-            <v-icon dark>
-              mdi-home
-            </v-icon>
-          </v-btn>
+          <ButtonHome/>
         </v-card-actions>
       </v-card>
     </v-col>
   </v-row>
 </template>
 <script>
+import ButtonHome from "../components/ButtonHome/ButtonHome";
 export default {
-
+  components: {ButtonHome},
   data: () => ({
     activities: [
       {
@@ -146,3 +138,62 @@ export default {
   }),
 };
 </script>
+<style scoped>
+
+.slideDownBtn{
+  animation-iteration-count: 3;
+  animation-name: slideDown;
+  -webkit-animation-name: slideDown;
+
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+
+  visibility: visible !important;
+}
+
+@keyframes slideDownBtn {
+  0% {
+    transform: translateY(-100%);
+  }
+  50%{
+    transform: translateY(8%);
+  }
+  65%{
+    transform: translateY(-4%);
+  }
+  80%{
+    transform: translateY(4%);
+  }
+  95%{
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slideDownBtn {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+  50%{
+    -webkit-transform: translateY(8%);
+  }
+  65%{
+    -webkit-transform: translateY(-4%);
+  }
+  80%{
+    -webkit-transform: translateY(4%);
+  }
+  95%{
+    -webkit-transform: translateY(-2%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+
+</style>

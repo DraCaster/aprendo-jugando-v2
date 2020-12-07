@@ -56,9 +56,9 @@
 </template>
 
 <script>
-import {playSound} from '../helpers/gameFunctions'
-import tina2 from '../assets/tina2.png'
-import paco1 from '../assets/paco1.png'
+import {playSound} from '../../helpers/gameFunctions'
+import tina2 from '../../assets/tina2.png'
+import paco1 from '../../assets/paco1.png'
 export default {
   name: "MenuHome",
   data: () => ({
@@ -86,7 +86,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 
 .containerButton {
   width: 100px;
