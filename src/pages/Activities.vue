@@ -4,7 +4,7 @@
       <v-card max-width="600" class="mx-auto">
         <v-card-title>ELEGI UNA OPCION
           <v-avatar
-          class="slideDownBtn">
+              class="slideDownBtn">
             <img
                 class="slideDownBtn"
                 src="../assets/arrowbottom.png"
@@ -31,13 +31,15 @@
               ></v-list-item-subtitle>
             </v-list-item-content>
 
-            <v-list-item-action>
+            <v-list-item-action
+                @mouseover="enableOrDisableAnimation(activity)"
+                @onmouseout="enableOrDisableAnimation(activity)">
               <v-btn
                   fab
                   small
-              :to="activity.path"
-              class="white--text"
-              color="teal">
+                  :to="activity.path"
+                  :class="{'white--text animateBtn': activity.animate, 'white--text': !activity.animate}"
+                  color="teal">
                 <v-icon
                 >
                   mdi-arrow-right-thick
@@ -60,6 +62,7 @@
 </template>
 <script>
 import ButtonHome from "../components/ButtonHome/ButtonHome";
+
 export default {
   components: {ButtonHome},
   data: () => ({
@@ -69,6 +72,7 @@ export default {
         icon: "mdi-book",
         subtitle: "¿QUE VOY A DECIR?",
         title: "SESION 1",
+        animate: false,
         path: "/gameone",
       },
       {
@@ -76,6 +80,7 @@ export default {
         icon: "mdi-book",
         subtitle: "AGRUPAR",
         title: "SESION 2",
+        animate: false,
         path: "/gametwo",
       },
       {
@@ -83,6 +88,7 @@ export default {
         icon: "mdi-book",
         subtitle: "ARMAR PAREJAS",
         title: "SESION 3",
+        animate: false,
         path: "/gamethree",
       },
       {
@@ -90,6 +96,7 @@ export default {
         icon: "mdi-book",
         subtitle: "NAIPES",
         title: "SESION 4",
+        animate: false,
         path: "/gamefour",
       },
       {
@@ -97,6 +104,7 @@ export default {
         icon: "mdi-book",
         subtitle: "EL TREN",
         title: "SESION 5",
+        animate: false,
         path: "/gamefive",
       },
       {
@@ -104,6 +112,7 @@ export default {
         icon: "mdi-book",
         subtitle: "EL PUEBLO MANDA",
         title: "SESION 6",
+        animate: false,
         path: "/gamesix",
       },
       {
@@ -111,6 +120,7 @@ export default {
         icon: "mdi-book",
         subtitle: "ARMAR PAREJAS",
         title: "SESION 7",
+        animate: false,
         path: "/gameseven",
       },
       {
@@ -118,6 +128,7 @@ export default {
         icon: "mdi-book",
         subtitle: "¿EN QUE FILA VAN?",
         title: "SESION 8",
+        animate: false,
         path: "/gameeight",
       },
       {
@@ -125,6 +136,7 @@ export default {
         icon: "mdi-book",
         subtitle: "EL TREN",
         title: "SESION 9",
+        animate: false,
         path: "/gamenine",
       },
       {
@@ -132,18 +144,26 @@ export default {
         icon: "mdi-book",
         subtitle: "-",
         title: "SESION 10",
+        animate: false,
         path: "/gameten",
       },
     ],
   }),
+  methods: {
+    enableOrDisableAnimation(item){
+      item.animate = !item.animate
+    }
+  }
 };
 </script>
 <style scoped>
 
-.slideDownBtn{
+.slideDownBtn {
+  width: 50px;
+  height: 50px;
   animation-iteration-count: 3;
-  animation-name: slideDown;
-  -webkit-animation-name: slideDown;
+  animation-name: slideDownBtn;
+  -webkit-animation-name: slideDownBtn;
 
   animation-duration: 1s;
   -webkit-animation-duration: 1s;
@@ -158,16 +178,16 @@ export default {
   0% {
     transform: translateY(-100%);
   }
-  50%{
+  50% {
     transform: translateY(8%);
   }
-  65%{
+  65% {
     transform: translateY(-4%);
   }
-  80%{
+  80% {
     transform: translateY(4%);
   }
-  95%{
+  95% {
     transform: translateY(-2%);
   }
   100% {
@@ -179,20 +199,43 @@ export default {
   0% {
     -webkit-transform: translateY(-100%);
   }
-  50%{
+  50% {
     -webkit-transform: translateY(8%);
   }
-  65%{
+  65% {
     -webkit-transform: translateY(-4%);
   }
-  80%{
+  80% {
     -webkit-transform: translateY(4%);
   }
-  95%{
+  95% {
     -webkit-transform: translateY(-2%);
   }
   100% {
     -webkit-transform: translateY(0%);
+  }
+}
+
+.animateBtn {
+  animation-name: balanceo;
+  animation-duration: 2s;
+  animation-iteration-count: 8;
+}
+
+@-webkit-keyframes balanceo {
+  20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale(1, 1) rotate(-3deg);
   }
 }
 
