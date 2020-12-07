@@ -21,7 +21,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/dracaster/"
+        href="https://github.com/DraCaster/aprendo-jugando-v2"
         target="_blank"
         text
       >
