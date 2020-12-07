@@ -29,7 +29,7 @@
             <Dialog :dialog="activateModal"
                     :pathImg="modalImg"
                     :title="modalTitle"
-                    pathNextGame="/gameseven"
+                    pathNextGame="/gamesixparttwo"
                     :activateNextGame="activateNextGame"
                     v-on:closeDialog="closeDialog"/>
           </v-dialog>
