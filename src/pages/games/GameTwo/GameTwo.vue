@@ -28,16 +28,19 @@
 <script>
 import TableImages from '../../../components/TableImages/TableImages'
 import Header from "../../../components/Header/Header"
-
-import auto from '../../../assets/cards/auto.png'
-import espejo from '../../../assets/cards/espejo.png'
-import arania from '../../../assets/cards/arania.png'
-import escoba from '../../../assets/cards/escoba.png'
-import anana from '../../../assets/cards/anana.png'
-import empanada from '../../../assets/cards/empanadas.png'
-import elefante from '../../../assets/cards/elefante.png'
-import aro from '../../../assets/cards/aro.png'
 import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+
+//Images
+import{
+  auto,
+    espejo,
+    arania,
+    escoba,
+    anana,
+    empanadas,
+    elefante,
+    aro
+} from '../../../helpers/images.js'
 
 export default {
   components: {
@@ -52,48 +55,56 @@ export default {
           title: 'auto',
           letter: 'a',
           url: auto,
+          selected: false,
           sound: ''
         },
         {
           title: 'espejo',
           letter: 'e',
           url: espejo,
+          selected: false,
           sound: ''
         },
         {
           title: 'arania',
           letter: 'a',
           url: arania,
+          selected: false,
           sound: ''
         },
         {
           title: 'escoba',
           letter: 'e',
           url: escoba,
+          selected: false,
           sound: ''
         },
         {
           title: 'anana',
           letter: 'a',
           url: anana,
+          selected: false,
           sound: ''
         },
         {
           title: 'empanada',
           letter: 'e',
-          url: empanada,
+          url: empanadas,
+          selected: false,
           sound: ''
         },
         {
           title: 'elefante',
           letter: 'e',
           url: elefante,
+          selected: false,
           sound: ''
         },
         {
           title: 'aro',
           letter: 'a',
           url: aro,
+          selected: false,
           sound: ''
         }
       ]

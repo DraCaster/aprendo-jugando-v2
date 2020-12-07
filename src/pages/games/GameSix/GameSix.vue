@@ -27,19 +27,23 @@
 </template>
 <script>
 import TableImages from '../../../components/TableImages/TableImages'
-import mano from '../../../assets/cards/mano.png'
-import martillo from '../../../assets/cards/martillo.png'
-import venda from '../../../assets/cards/venda.png'
-import tambor from '../../../assets/cards/tambor.png'
-import mago from '../../../assets/cards/mago.png'
-import manzana from '../../../assets/cards/manzana.png'
-import mesa from '../../../assets/cards/mesa.png'
-import nariz from '../../../assets/cards/nariz.png'
-import reloj from '../../../assets/cards/reloj.png'
-import volcan from '../../../assets/cards/volcan.png'
-import mono from '../../../assets/cards/mono.png'
 import Header from "../../../components/Header/Header";
 import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+
+//Images
+import {
+  mano,
+  martillo,
+  venda,
+  tambor,
+  mago,
+  manzana,
+  mesa,
+  nariz,
+  reloj,
+  volcan,
+  mono
+} from '../../../helpers/images'
 
 export default {
   components:{
@@ -54,66 +58,77 @@ export default {
             title: 'mano',
             letter: 'm',
             url: mano,
+            selected: false,
             sound: ''
           },
           {
             title: 'martillo',
             letter: 'm',
             url: martillo,
+            selected: false,
             sound: ''
           },
           {
             title: 'venda',
             letter: 'v',
             url: venda,
+            selected: false,
             sound: ''
           },
           {
             title: 'tambor',
             letter: 't',
             url: tambor,
+            selected: false,
             sound: ''
           },
           {
             title: 'mago',
             letter: 'm',
             url: mago,
+            selected: false,
             sound: ''
           },
           {
             title: 'manzana',
             letter: 'm',
             url: manzana,
+            selected: false,
             sound: ''
           },
           {
             title: 'mesa',
             letter: 'm',
             url: mesa,
+            selected: false,
             sound: ''
           },
           {
             title: 'nariz',
             letter: 'n',
             url: nariz,
+            selected: false,
             sound: ''
           },
           {
             title: 'reloj',
             letter: 'r',
             url: reloj,
+            selected: false,
             sound: ''
           },
           {
             title: 'volcan',
             letter: 'v',
             url: volcan,
+            selected: false,
             sound: ''
           },
           {
             title: 'mono',
             letter: 'm',
             url: mono,
+            selected: false,
             sound: ''
           }
         ]

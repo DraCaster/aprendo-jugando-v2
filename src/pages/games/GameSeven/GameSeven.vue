@@ -27,20 +27,26 @@
 </template>
 <script>
 import TableImages from '../../../components/TableImages/TableImages'
-import rana from '../../../assets/cards/rana.png'
-import media from '../../../assets/cards/media.png'
-import sifon from '../../../assets/cards/sifon.png'
-import sillon from '../../../assets/cards/sillon.png'
-import munieca from '../../../assets/cards/munieca.png'
-import suma from '../../../assets/cards/suma.png'
-import rueda from '../../../assets/cards/rueda.png'
-import lata from '../../../assets/cards/lata.png'
+import Header from "../../../components/Header/Header";
 import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+
+//Images
+import {
+  rana,
+  media,
+  sifon,
+  sillon,
+  munieca,
+  suma,
+  rueda,
+  lata
+} from '../../../helpers/images'
 
 export default {
   components:{
     ButtonHome,
-    TableImages
+    TableImages,
+    Header
   },
     data(){
       return {
@@ -49,48 +55,56 @@ export default {
             title: 'rana',
             letter: 'r',
             url: rana,
+            selected: false,
             sound: ''
           },
           {
             title: 'media',
             letter: 'm',
             url: media,
+            selected: false,
             sound: ''
           },
           {
             title: 'sifon',
             letter: 's',
             url: sifon,
+            selected: false,
             sound: ''
           },
           {
             title: 'sillon',
             letter: 's',
             url: sillon,
+            selected: false,
             sound: ''
           },
           {
             title: 'munieca',
             letter: 'm',
             url: munieca,
+            selected: false,
             sound: ''
           },
           {
             title: 'suma',
             letter: 's',
             url: suma,
+            selected: false,
             sound: ''
           },
           {
             title: 'rueda',
             letter: 'r',
             url: rueda,
+            selected: false,
             sound: ''
           },
           {
             title: 'lata',
             letter: 'l',
             url: lata,
+            selected: false,
             sound: ''
           }
         ]

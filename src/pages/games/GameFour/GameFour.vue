@@ -27,18 +27,22 @@
 </template>
 <script>
 import TableImages from '../../../components/TableImages/TableImages'
-import anillo from '../../../assets/cards/anillo.png'
-import aro from '../../../assets/cards/aro.png'
-import ojo from '../../../assets/cards/ojo.png'
-import ola from '../../../assets/cards/ola.png'
-import uva from '../../../assets/cards/uva.png'
-import unia from '../../../assets/cards/unia.png'
-import arbol from '../../../assets/cards/arbol.png'
-import ala from '../../../assets/cards/ala.png'
-import oso from '../../../assets/cards/oso.png'
-import oreja from '../../../assets/cards/oreja.png'
 import Header from "../../../components/Header/Header";
 import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+
+//Images
+import {
+  anillo,
+  aro,
+  ojo,
+  ola,
+  uva,
+  unia,
+  arbol,
+  ala,
+  oso,
+  oreja
+} from '../../../helpers/images'
 
 export default {
   components:{
@@ -53,60 +57,70 @@ export default {
             title: 'anillo',
             letter: 'a',
             url: anillo,
+            selected: false,
             sound: ''
           },
           {
             title: 'aro',
             letter: 'a',
             url: aro,
+            selected: false,
             sound: ''
           },
           {
             title: 'ojo',
             letter: 'o',
             url: ojo,
+            selected: false,
             sound: ''
           },
           {
             title: 'ola',
             letter: 'o',
             url: ola,
+            selected: false,
             sound: ''
           },
           {
             title: 'uva',
             letter: 'u',
             url: uva,
+            selected: false,
             sound: ''
           },
           {
             title: 'unia',
             letter: 'u',
             url: unia,
+            selected: false,
             sound: ''
           },
           {
             title: 'arbol',
             letter: 'a',
             url: arbol,
+            selected: false,
             sound: ''
           },
           {
             title: 'ala',
             letter: 'a',
             url: ala,
+            selected: false,
             sound: ''
           },
           {
             title: 'oso',
             letter: 'o',
             url: oso,
+            selected: false,
             sound: ''
           },
           {
             title: 'oreja',
             letter: 'o',
             url: oreja,
+            selected: false,
             sound: ''
           }
         ]

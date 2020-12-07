@@ -27,20 +27,24 @@
 </template>
 <script>
 import TableImages from '../../../components/TableImages/TableImages'
-import espada from '../../../assets/cards/espada.png'
-import espejo from '../../../assets/cards/espejo.png'
-import escuela from '../../../assets/cards/escuela.png'
-import elefante from '../../../assets/cards/elefante.png'
-import iman from '../../../assets/cards/iman.png'
-import iglesia from '../../../assets/cards/iglesia.png'
-import isla from '../../../assets/cards/isla.png'
-import estrella from '../../../assets/cards/estrella.png'
-import incendio from '../../../assets/cards/incendio.png'
-import anteojos from '../../../assets/cards/anteojos.png'
-import uno from '../../../assets/cards/uno.png'
-import indio from '../../../assets/cards/indio.png'
 import Header from "../../../components/Header/Header";
 import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+
+//Images
+import {
+  espada,
+  espejo,
+  escuela,
+  elefante,
+  iman,
+  iglesia,
+  isla,
+  estrella,
+  incendio,
+  anteojos,
+  uno,
+  indio
+} from '../../../helpers/images'
 
 export default {
   components:{
@@ -55,72 +59,84 @@ export default {
             title: 'espada',
             letter: 'e',
             url: espada,
+            selected: false,
             sound: ''
           },
           {
             title: 'espejo',
             letter: 'e',
             url: espejo,
+            selected: false,
             sound: ''
           },
           {
             title: 'escuela',
             letter: 'e',
             url: escuela,
+            selected: false,
             sound: ''
           },
           {
             title: 'elefante',
             letter: 'e',
             url: elefante,
+            selected: false,
             sound: ''
           },
           {
             title: 'iman',
             letter: 'i',
             url: iman,
+            selected: false,
             sound: ''
           },
           {
             title: 'iglesia',
             letter: 'i',
             url: iglesia,
+            selected: false,
             sound: ''
           },
           {
             title: 'isla',
             letter: 'i',
             url: isla,
+            selected: false,
             sound: ''
           },
           {
             title: 'estrella',
             letter: 'e',
             url: estrella,
+            selected: false,
             sound: ''
           },
           {
             title: 'incendio',
             letter: 'i',
             url: incendio,
+            selected: false,
             sound: ''
           },
           {
             title: 'anteojos',
             letter: 'a',
             url: anteojos,
+            selected: false,
             sound: ''
           },
           {
             title: 'uno',
             letter: 'u',
             url: uno,
+            selected: false,
             sound: ''
           },
           {
             title: 'indio',
             letter: 'i',
             url: indio,
+            selected: false,
             sound: ''
           }
         ]
