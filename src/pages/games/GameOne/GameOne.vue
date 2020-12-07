@@ -119,6 +119,11 @@ export default {
           sound: alaSound
         }]
     }
+  },
+  methods:{
+    checkGame(){
+      console.log('lala')
+    }
   }
 }
 </script>
