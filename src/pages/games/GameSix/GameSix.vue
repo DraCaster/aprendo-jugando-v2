@@ -7,18 +7,7 @@
           class="mx-auto"
           max-width="173">
         <v-card-actions>
-          <v-btn
-              class="mx-2"
-              fab
-              dark
-              large
-              color="cyan"
-              to="/"
-          >
-            <v-icon dark>
-              mdi-home
-            </v-icon>
-          </v-btn>
+          <ButtonHome/>
           <v-btn
               class="mx-2"
               fab
@@ -50,9 +39,11 @@ import reloj from '../../../assets/cards/reloj.png'
 import volcan from '../../../assets/cards/volcan.png'
 import mono from '../../../assets/cards/mono.png'
 import Header from "../../../components/Header/Header";
+import ButtonHome from "../../../components/ButtonHome/ButtonHome";
 
 export default {
   components:{
+    ButtonHome,
     Header,
     TableImages
   },

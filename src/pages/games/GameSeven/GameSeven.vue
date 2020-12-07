@@ -7,18 +7,7 @@
           class="mx-auto"
           max-width="173">
         <v-card-actions>
-          <v-btn
-              class="mx-2"
-              fab
-              dark
-              large
-              color="cyan"
-              to="/"
-          >
-            <v-icon dark>
-              mdi-home
-            </v-icon>
-          </v-btn>
+         <ButtonHome/>
           <v-btn
               class="mx-2"
               fab
@@ -46,9 +35,11 @@ import munieca from '../../../assets/cards/munieca.png'
 import suma from '../../../assets/cards/suma.png'
 import rueda from '../../../assets/cards/rueda.png'
 import lata from '../../../assets/cards/lata.png'
+import ButtonHome from "../../../components/ButtonHome/ButtonHome";
 
 export default {
   components:{
+    ButtonHome,
     TableImages
   },
     data(){

@@ -19,18 +19,7 @@
           class="mx-auto"
           max-width="100">
         <v-card-actions>
-          <v-btn
-              class="mx-2"
-              fab
-              dark
-              large
-              color="cyan"
-              to="/"
-          >
-            <v-icon dark>
-              mdi-home
-            </v-icon>
-          </v-btn>
+          <ButtonHome/>
         </v-card-actions>
       </v-card>
     </v-col>
@@ -38,7 +27,9 @@
 
 </template>
 <script>
+import ButtonHome from "../components/ButtonHome/ButtonHome";
 export default {
-    name:"About"
+    name:"About",
+  components: {ButtonHome}
 }
 </script>

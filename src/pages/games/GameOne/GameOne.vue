@@ -7,18 +7,7 @@
           class="mx-auto"
           max-width="173">
         <v-card-actions>
-          <v-btn
-              class="mx-2"
-              fab
-              dark
-              large
-              color="cyan"
-              to="/"
-          >
-            <v-icon dark>
-              mdi-home
-            </v-icon>
-          </v-btn>
+          <ButtonHome/>
           <v-btn
               class="mx-2"
               fab
@@ -57,9 +46,11 @@ import olaSound from '../../../assets/sounds/words/ola.wav'
 import empanadasSound from '../../../assets/sounds/words/empanada.wav'
 import alaSound from '../../../assets/sounds/words/ala.wav'
 import gameTitle from '../../../assets/sounds/gameTitles/game-one.wav'
+import ButtonHome from "../../../components/ButtonHome/ButtonHome";
 
 export default {
   components: {
+    ButtonHome,
     TableImages,
     Header
   },
