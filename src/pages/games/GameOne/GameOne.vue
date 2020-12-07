@@ -29,6 +29,8 @@
             <Dialog :dialog="activateModal"
                     :pathImg="modalImg"
                     :title="modalTitle"
+                    pathNextGame="/gametwo"
+                    :activateNextGame="activateNextGame"
                     v-on:closeDialog="closeDialog"/>
           </v-dialog>
         </v-card-actions>
@@ -80,6 +82,7 @@ export default {
       modalImg: null,
       modalTitle: null,
       result: true,
+      activateNextGame: false,
       gameTitlePath: gameTitleOne,
       activateModal: false,
       items: [
@@ -144,14 +147,15 @@ export default {
   methods: {
     checkGame() {
       this.result = this.items.find(item => item.selected === true)
-
-      console.log('items: ',this.items)
-      if (this.result) {
+      console.log('result: ',this.result)
+      if (this.result && this.result.letter === 'u') {
         this.modalImg = happyface
         this.modalTitle = "¡MUY BIEN!"
+        this.activateNextGame = true
       } else {
         this.modalImg = sadface
         this.modalTitle = "UPS! TE EQUIVOCASTE!"
+        this.activateNextGame = false
       }
       this.activateModal = true
     },

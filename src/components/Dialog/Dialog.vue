@@ -15,6 +15,17 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-avatar
+              v-if="activateNextGame"
+              class="align-center"
+              :to="pathNextGame">
+            <img
+                class="balanced"
+                src="../../assets/arrowright.png"
+                alt="arrow"
+            >
+          </v-avatar>
+          <v-avatar
+              v-else
               class="align-center"
               @click="$emit('closeDialog',false)">
             <img
@@ -31,7 +42,9 @@
 export default{
   props:{
     title: {type: String, default: "An example title"},
-    pathImg: String
+    pathImg: String,
+    pathNextGame: {type: String},
+    activateNextGame: Boolean
   }
 }
 </script>
