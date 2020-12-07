@@ -8,35 +8,33 @@
           max-width="173">
         <v-card-actions>
           <ButtonHome/>
-          <v-btn
-              class="mx-2"
-              fab
-              dark
-              large
-              color="green"
-              @click="checkGame"
-          >
-            <v-icon dark>
-              mdi-check
-            </v-icon>
-          </v-btn>
+
+          <!-- Dialog Happy -->
+          <v-dialog :value="activateModal" width="500">
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                  class="mx-2"
+                  fab
+                  dark
+                  v-bind="attrs"
+                  v-on="on"
+                  large
+                  color="green"
+                  @click="checkGame"
+              >
+                <v-icon dark>
+                  mdi-check
+                </v-icon>
+              </v-btn>
+            </template>
+            <Dialog :dialog="activateModal"
+                    :pathImg="modalImg"
+                    :title="modalTitle"
+                    v-on:closeDialog="closeDialog"/>
+          </v-dialog>
         </v-card-actions>
       </v-card>
     </v-col>
-    <!-- Dialog Happy -->
-    <v-dialog :value="activateModalHappy" width="500">
-      <Dialog :dialog="activateModalHappy"
-              :pathImg="happyfaceImg"
-              v-on:closeDialog="closeDialog"/>
-    </v-dialog>
-
-    <!-- Dialog Sad -->
-    <v-dialog :value="activateModalSad" width="500">
-      <Dialog :dialog="activateModalSad"
-              :pathImg="sadfaceImg"
-              v-on:closeDialog="closeDialogSad"/>
-    </v-dialog>
-
   </v-row>
 </template>
 <script>
@@ -59,7 +57,7 @@ import {
 } from '../../../helpers/images'
 
 //Sounds
-import{
+import {
   espadaSound,
   unoSound,
   osoSound,
@@ -80,11 +78,11 @@ export default {
   },
   data() {
     return {
-      happyfaceImg: happyface,
-      sadfaceImg: sadface,
+      modalImg: null,
+      modalTitle: null,
+      result: true,
       gameTitlePath: gameTitleOne,
-      activateModalHappy: false,
-      activateModalSad: false,
+      activateModal: false,
       items: [
         {
           id: 0,
@@ -144,16 +142,21 @@ export default {
         }]
     }
   },
-  methods:{
-    checkGame(){
-      this.activateModalHappy = true
+  methods: {
+    checkGame() {
+      if (this.result) {
+        this.modalImg = happyface
+        this.modalTitle = "¡MUY BIEN!"
+      } else {
+        this.modalImg = sadface
+        this.modalTitle = "UPS! TE EQUIVOCASTE!"
+      }
+      this.activateModal = true
     },
-    closeDialog(){
-      this.activateModalHappy = false
+    closeDialog() {
+      this.activateModal = false
     },
-    closeDialogSad(){
-      this.activateModalSad = false
-    }
+
   }
 }
 </script>
