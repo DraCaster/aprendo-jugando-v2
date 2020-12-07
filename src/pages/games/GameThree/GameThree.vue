@@ -27,18 +27,23 @@
 </template>
 <script>
 import TableImages from '../../../components/TableImages/TableImages';
-import olla from '../../../assets/cards/olla.png'
-import ojotas from '../../../assets/cards/ojota.png'
-import oveja from '../../../assets/cards/oveja.png'
-import unia from '../../../assets/cards/unia.png'
-import ola from '../../../assets/cards/ola.png'
-import uva from '../../../assets/cards/uva.png'
-import espejo from '../../../assets/cards/espejo.png'
-import utiles from '../../../assets/cards/utiles.png'
-import uniforme from '../../../assets/cards/uniforme.png'
-import arania from '../../../assets/cards/arania.png'
 import Header from "../../../components/Header/Header";
 import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+
+//Images
+import{
+  olla,
+  ojota,
+  oveja,
+  unia,
+  ola,
+  uva,
+  espejo,
+  utiles,
+  uniforme,
+  arania
+} from '../../../helpers/images.js'
+
 export default {
   components:{
     ButtonHome,
@@ -52,60 +57,70 @@ export default {
             title: 'olla',
             letter: 'o',
             url: olla,
+            selected: false,
             sound: ''
           },
           {
             title: 'ojotas',
             letter: 'o',
-            url: ojotas,
+            url: ojota,
+            selected: false,
             sound: ''
           },
           {
             title: 'oveja',
             letter: 'o',
             url: oveja,
+            selected: false,
             sound: ''
           },
           {
             title: 'unia',
             letter: 'u',
             url: unia,
+            selected: false,
             sound: ''
           },
           {
             title: 'ola',
             letter: 'o',
             url: ola,
+            selected: false,
             sound: ''
           },
           {
             title: 'uva',
             letter: 'u',
             url: uva,
+            selected: false,
             sound: ''
           },
           {
             title: 'espejo',
             letter: 'e',
             url: espejo,
+            selected: false,
             sound: ''
           },
           {
             title: 'utiles',
             letter: 'u',
             url: utiles,
+            selected: false,
             sound: ''
           },
           {
             title: 'uniforme',
             letter: 'u',
             url: uniforme,
+            selected: false,
             sound: ''
           },
           {
             title: 'arania',
             letter: 'a',
             url: arania,
+            selected: false,
             sound: ''
           }
         ]
