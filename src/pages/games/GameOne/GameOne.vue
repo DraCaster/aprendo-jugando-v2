@@ -23,30 +23,34 @@
       </v-card>
     </v-col>
   </v-row>
-
 </template>
 <script>
 import TableImages from '../../../components/TableImages/TableImages'
 import Header from "../../../components/Header/Header";
+import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+
 //Images
-import espada from '../../../assets/cards/espada.png'
-import uno from '../../../assets/cards/uno.png'
-import oso from '../../../assets/cards/oso.png'
-import aro from '../../../assets/cards/aro.png'
-import ola from '../../../assets/cards/ola.png'
-import empanadas from '../../../assets/cards/empanadas.png'
-import ala from '../../../assets/cards/ala.png'
+import {
+  espada,
+  uno,
+  oso,
+  aro,
+  ola,
+  empanadas,
+  ala
+} from '../../../helpers/images'
 
 //Sounds
-import espadaSound from '../../../assets/sounds/words/espada.wav'
-import unoSound from '../../../assets/sounds/words/uno.wav'
-import osoSound from '../../../assets/sounds/words/oso.wav'
-import aroSound from '../../../assets/sounds/words/aro.wav'
-import olaSound from '../../../assets/sounds/words/ola.wav'
-import empanadasSound from '../../../assets/sounds/words/empanada.wav'
-import alaSound from '../../../assets/sounds/words/ala.wav'
-import gameTitle from '../../../assets/sounds/gameTitles/game-one.wav'
-import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+import{
+  espadaSound,
+  unoSound,
+  osoSound,
+  aroSound,
+  olaSound,
+  empanadasSound,
+  alaSound,
+  gameTitleOne
+} from '../../../helpers/sounds'
 
 export default {
   components: {
@@ -56,7 +60,7 @@ export default {
   },
   data() {
     return {
-      gameTitlePath: gameTitle,
+      gameTitlePath: gameTitleOne,
       items: [
         {
           id: 0,
