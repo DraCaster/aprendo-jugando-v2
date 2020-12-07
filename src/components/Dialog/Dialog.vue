@@ -1,31 +1,37 @@
 <template>
   <v-row justify="center">
-      <v-card>
-        <v-card-title class="headline">
-          {{ this.title }}
-        </v-card-title>
+    <v-card>
+      <v-card-title class="headline">
+        {{ this.title }}
+      </v-card-title>
 
-        <v-card-text>
-          <v-img
-              :src="pathImg"
-              aspect-ratio="1"
-          />
-        </v-card-text>
+      <v-card-text>
+        <v-img
+            :src="pathImg"
+        />
+      </v-card-text>
 
-        <v-card-actions>
-          <v-spacer></v-spacer>
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn
+            class="mx-2"
+            align="center"
+            fab
+            v-if="activateNextGame"
+            :to="pathNextGame"
+        >
           <v-avatar
-              v-if="activateNextGame"
               class="align-center"
-              :to="pathNextGame">
+          >
             <img
                 class="balanced"
                 src="../../assets/arrowright.png"
                 alt="arrow"
             >
           </v-avatar>
+        </v-btn>
+        <v-btn v-else fab>
           <v-avatar
-              v-else
               class="align-center"
               @click="$emit('closeDialog',false)">
             <img
@@ -34,13 +40,16 @@
                 alt="arrow"
             >
           </v-avatar>
-        </v-card-actions>
-      </v-card>
+        </v-btn>
+
+      </v-card-actions>
+    </v-card>
   </v-row>
 </template>
 <script>
-export default{
-  props:{
+
+export default {
+  props: {
     title: {type: String, default: "An example title"},
     pathImg: String,
     pathNextGame: {type: String},

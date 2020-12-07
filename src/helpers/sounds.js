@@ -10,6 +10,9 @@ import alaSound from '../assets/sounds/words/ala.wav'
 //Titles
 import gameTitleOne from '../assets/sounds/gameTitles/game-one.wav'
 
+//Others
+import ganaste from '../assets/sounds/ganaste.wav'
+import error from '../assets/sounds/error.wav'
 export {
     espadaSound,
     unoSound,
@@ -18,5 +21,7 @@ export {
     olaSound,
     empanadasSound,
     alaSound,
-    gameTitleOne
+    gameTitleOne,
+    ganaste,
+    error
 }
