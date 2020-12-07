@@ -76,7 +76,8 @@ import uva from '../assets/cards/uva.png'
 import venda from '../assets/cards/venda.png'
 import volcan from '../assets/cards/volcan.png'
 
-
+import happyface from '../assets/happyface.png'
+import sadface from '../assets/sadface.png'
 export {
     ala,
     anana,
@@ -154,5 +155,7 @@ export {
     utiles,
     uva,
     venda,
-    volcan
+    volcan,
+    happyface,
+    sadface
 }

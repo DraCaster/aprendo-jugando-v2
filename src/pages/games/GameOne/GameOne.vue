@@ -14,6 +14,7 @@
               dark
               large
               color="green"
+              @click="checkGame"
           >
             <v-icon dark>
               mdi-check
@@ -22,12 +23,27 @@
         </v-card-actions>
       </v-card>
     </v-col>
+    <!-- Dialog Happy -->
+    <v-dialog :value="activateModalHappy" width="500">
+      <Dialog :dialog="activateModalHappy"
+              :pathImg="happyfaceImg"
+              v-on:closeDialog="closeDialog"/>
+    </v-dialog>
+
+    <!-- Dialog Sad -->
+    <v-dialog :value="activateModalSad" width="500">
+      <Dialog :dialog="activateModalSad"
+              :pathImg="sadfaceImg"
+              v-on:closeDialog="closeDialogSad"/>
+    </v-dialog>
+
   </v-row>
 </template>
 <script>
 import TableImages from '../../../components/TableImages/TableImages'
 import Header from "../../../components/Header/Header";
 import ButtonHome from "../../../components/ButtonHome/ButtonHome";
+import Dialog from "../../../components/Dialog/Dialog";
 
 //Images
 import {
@@ -37,7 +53,9 @@ import {
   aro,
   ola,
   empanadas,
-  ala
+  ala,
+  happyface,
+  sadface
 } from '../../../helpers/images'
 
 //Sounds
@@ -52,15 +70,21 @@ import{
   gameTitleOne
 } from '../../../helpers/sounds'
 
+
 export default {
   components: {
+    Dialog,
     ButtonHome,
     TableImages,
     Header
   },
   data() {
     return {
+      happyfaceImg: happyface,
+      sadfaceImg: sadface,
       gameTitlePath: gameTitleOne,
+      activateModalHappy: false,
+      activateModalSad: false,
       items: [
         {
           id: 0,
@@ -122,7 +146,13 @@ export default {
   },
   methods:{
     checkGame(){
-      console.log('lala')
+      this.activateModalHappy = true
+    },
+    closeDialog(){
+      this.activateModalHappy = false
+    },
+    closeDialogSad(){
+      this.activateModalSad = false
     }
   }
 }
