@@ -9,8 +9,7 @@
         <v-card-actions>
           <ButtonHome/>
 
-          <!-- Dialog Happy -->
-          <v-dialog :value="activateModal" width="500">
+          <v-dialog :value="activateModal" max-width="500">
             <template v-slot:activator="{ on, attrs }">
               <v-btn
                   class="mx-2"
@@ -144,6 +143,9 @@ export default {
   },
   methods: {
     checkGame() {
+      this.result = this.items.find(item => item.selected === true)
+
+      console.log('items: ',this.items)
       if (this.result) {
         this.modalImg = happyface
         this.modalTitle = "¡MUY BIEN!"
