@@ -1,4 +1,5 @@
 import GameOne from "./GameOne/GameOne";
+import GameOnePartTwo from "./GameOne/GameOnePartTwo";
 import GameTwo from "./GameTwo/GameTwo";
 import GameThree from "./GameThree/GameThree";
 import GameFour from "./GameFour/GameFour";
@@ -11,6 +12,7 @@ import GameTen from "./GameTen/GameTen";
 
 const gameRoutes = [
   { name: "gameOne", path: "/gameone", component: GameOne },
+  {name:"gameOnePartTwo", path: "/gameoneparttwo", component: GameOnePartTwo},
   { name: "gameTwo", path: "/gametwo", component: GameTwo },
   { name: "gameThree", path: "/gamethree", component: GameThree },
   { name: "gameFour", path: "/gamefour", component: GameFour },
