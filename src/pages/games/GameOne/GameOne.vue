@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <Header title="¿QUE VOY A DECIR?"/>
+    <Header title="¿QUE VOY A DECIR?" :sound-title="gameTitlePath"/>
     <v-col cols="12">
       <v-card
           class="mx-auto"
@@ -62,7 +62,7 @@ import aroSound from '../../../assets/sounds/words/aro.wav'
 import olaSound from '../../../assets/sounds/words/ola.wav'
 import empanadasSound from '../../../assets/sounds/words/empanada.wav'
 import alaSound from '../../../assets/sounds/words/ala.wav'
-
+import gameTitle from '../../../assets/sounds/gameTitles/game-one.wav'
 export default {
  components:{
    TableImages,
@@ -70,6 +70,7 @@ export default {
  },
   data() {
     return {
+      gameTitlePath: gameTitle,
       items: [
         {
           id:0,

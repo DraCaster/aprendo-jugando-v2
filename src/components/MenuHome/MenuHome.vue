@@ -86,7 +86,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 
 .containerButton {
   width: 100px;
