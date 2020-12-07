@@ -7,7 +7,7 @@
               class="slideDownBtn">
             <img
                 class="slideDownBtn"
-                src="../assets/arrowbottom.png"
+                src="../../assets/arrowbottom.png"
                 alt="arrow"
             >
           </v-avatar>
@@ -61,7 +61,7 @@
   </v-row>
 </template>
 <script>
-import ButtonHome from "../components/ButtonHome/ButtonHome";
+import ButtonHome from "../../components/ButtonHome/ButtonHome";
 
 export default {
   components: {ButtonHome},

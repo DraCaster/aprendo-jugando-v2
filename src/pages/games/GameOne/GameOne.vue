@@ -66,9 +66,8 @@ import {
   olaSound,
   empanadasSound,
   alaSound,
-  gameTitleOne
+  gameTitleOne, ganaste, error
 } from '../../../helpers/sounds'
-
 
 export default {
   components: {
@@ -77,11 +76,16 @@ export default {
     TableImages,
     Header
   },
+  mounted() {
+    this.generateSounds()
+  },
   data() {
     return {
       modalImg: null,
       modalTitle: null,
       result: true,
+      soundOk: null,
+      soundError:null,
       activateNextGame: false,
       gameTitlePath: gameTitleOne,
       activateModal: false,
@@ -152,17 +156,22 @@ export default {
         this.modalImg = happyface
         this.modalTitle = "¡MUY BIEN!"
         this.activateNextGame = true
+        this.soundOk.play()
       } else {
         this.modalImg = sadface
         this.modalTitle = "UPS! TE EQUIVOCASTE!"
         this.activateNextGame = false
+        this.soundError.play()
       }
       this.activateModal = true
     },
     closeDialog() {
       this.activateModal = false
     },
-
+    generateSounds(){
+        this.soundOk = new Audio(ganaste)
+        this.soundError = new Audio(error)
+    }
   }
 }
 </script>
