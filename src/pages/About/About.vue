@@ -27,7 +27,7 @@
 
 </template>
 <script>
-import ButtonHome from "../components/ButtonHome/ButtonHome";
+import ButtonHome from "../../components/ButtonHome/ButtonHome";
 export default {
     name:"About",
   components: {ButtonHome}
