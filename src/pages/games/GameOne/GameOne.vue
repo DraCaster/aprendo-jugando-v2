@@ -151,7 +151,7 @@ export default {
   methods: {
     checkGame() {
       this.result = this.items.find(item => item.selected === true)
-      console.log('result: ',this.result)
+
       if (this.result && this.result.letter === 'u') {
         this.modalImg = happyface
         this.modalTitle = "¡MUY BIEN!"

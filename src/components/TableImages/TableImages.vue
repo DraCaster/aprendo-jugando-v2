@@ -1,36 +1,23 @@
 <template>
   <v-col cols="12">
     <v-card
-        class="mx-auto"
-        max-width="500">
+        class="mx-auto background"
+        :max-width="maxWidth">
       <v-row>
         <v-col
             v-for="item in images"
             :key="item.id"
-            class="d-flex child-flex"
-            cols="3"
+            class="background"
+            :cols="cols"
         >
           <v-img
               :src="item.url"
-              :lazy-src="item.url"
               aspect-ratio="1"
               :class="{'paint': item.selected}"
               v-on:click="
           selectItem(images,item);
           removePainted(item)"
           >
-            <template v-slot:placeholder>
-              <v-row
-                  class="fill-height ma-0"
-                  align="center"
-                  justify="center"
-              >
-                <v-progress-circular
-                    indeterminate
-                    color="grey lighten-5"
-                ></v-progress-circular>
-              </v-row>
-            </template>
           </v-img>
         </v-col>
       </v-row>
@@ -41,7 +28,9 @@
 
 export default {
   props: {
-    items: {}
+    items: {},
+    cols: {type: String, default: "3"},
+    maxWidth:{type: String, default: "500"}
   },
   mounted() {
     this.generateSounds()
@@ -88,5 +77,8 @@ export default {
 <style scoped>
 .paint {
   border: 5px solid #e25b2a;
+}
+.background{
+  background-color: burlywood;
 }
 </style>

@@ -78,6 +78,19 @@ import volcan from '../assets/images/cards/volcan.png'
 
 import happyface from '../assets/happyface.png'
 import sadface from '../assets/sadface.png'
+
+import a from '../assets/images/letters/a.png'
+import e from '../assets/images/letters/e.png'
+import j from '../assets/images/letters/j.png'
+import l from '../assets/images/letters/l.png'
+import m from '../assets/images/letters/m.png'
+import n from '../assets/images/letters/n.png'
+import o from '../assets/images/letters/o.png'
+import r from '../assets/images/letters/r.png'
+import s from '../assets/images/letters/s.png'
+import t from '../assets/images/letters/t.png'
+import u from '../assets/images/letters/u.png'
+
 export {
     ala,
     anana,
@@ -157,5 +170,16 @@ export {
     venda,
     volcan,
     happyface,
-    sadface
+    sadface,
+    a,
+    e,
+    j,
+    l,
+    m,
+    n,
+    o,
+    r,
+    s,
+    t,
+    u
 }
