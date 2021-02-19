@@ -1,5 +1,40 @@
 <template>
-  <v-row align="center">
+  <v-container>
+    <v-row>
+      <v-col
+          v-for="activity in activities"
+          :key="activity.title"
+          :cols="$vuetify.breakpoint.xs ? '12' : '3'"
+      >
+        <v-card rounded="8" max-width="200">
+          <v-img
+              :src="activity.img"
+              class="white--text align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="200px"
+          >
+            <v-card-title v-text="activity.title"></v-card-title>
+          </v-img>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+                fab
+                small
+                :to="activity.path"
+                :class="{'white--text animateBtn': activity.animate, 'white--text': !activity.animate}"
+                color="teal">
+              <v-icon
+              >
+                mdi-arrow-right-thick
+              </v-icon>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+  <!-- <v-row align="center">
     <v-col cols="12">
       <v-card max-width="600" class="mx-auto">
         <v-card-title>ELEGI UNA OPCION
@@ -58,13 +93,17 @@
         </v-card-actions>
       </v-card>
     </v-col>
-  </v-row>
+  </v-row> -->
 </template>
 <script>
-import ButtonHome from "../../components/ButtonHome/ButtonHome";
-
+//import ButtonHome from "../../components/ButtonHome/ButtonHome";
+import tina2 from '../../assets/tina2.png'
+import paco1 from '../../assets/paco1.png'
+import uno from '../../assets/uno.jpeg'
+import dos from '../../assets/dos.png'
+import tres from '../../assets/tres.jpeg'
 export default {
-  components: {ButtonHome},
+ // components: {ButtonHome},
   data: () => ({
     activities: [
       {
@@ -74,6 +113,7 @@ export default {
         title: "SESION 1",
         animate: false,
         path: "/gameone",
+        img: uno
       },
       {
         color: "yellow",
@@ -82,6 +122,7 @@ export default {
         title: "SESION 2",
         animate: false,
         path: "/gametwo",
+        img: dos
       },
       {
         color: "green",
@@ -90,6 +131,7 @@ export default {
         title: "SESION 3",
         animate: false,
         path: "/gamethree",
+        img: tres
       },
       {
         color: "orange",
@@ -98,6 +140,7 @@ export default {
         title: "SESION 4",
         animate: false,
         path: "/gamefour",
+        img: tina2
       },
       {
         color: "blue",
@@ -106,6 +149,7 @@ export default {
         title: "SESION 5",
         animate: false,
         path: "/gamefive",
+        img: paco1
       },
       {
         color: "amber",
@@ -114,6 +158,7 @@ export default {
         title: "SESION 6",
         animate: false,
         path: "/gamesix",
+        img: paco1
       },
       {
         color: "blue",
@@ -122,6 +167,7 @@ export default {
         title: "SESION 7",
         animate: false,
         path: "/gameseven",
+        img: paco1
       },
       {
         color: "pink",
@@ -130,6 +176,7 @@ export default {
         title: "SESION 8",
         animate: false,
         path: "/gameeight",
+        img: paco1
       },
       {
         color: "blue",
@@ -138,6 +185,7 @@ export default {
         title: "SESION 9",
         animate: false,
         path: "/gamenine",
+        img: paco1
       },
       {
         color: "amber",
@@ -146,6 +194,7 @@ export default {
         title: "SESION 10",
         animate: false,
         path: "/gameten",
+        img: paco1
       },
     ],
   }),

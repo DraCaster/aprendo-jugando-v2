@@ -20,14 +20,6 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/DraCaster/aprendo-jugando-v2"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">ACERCA DE</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
     </v-app-bar>
     <v-main class="wallpaper">
       <router-view></router-view>

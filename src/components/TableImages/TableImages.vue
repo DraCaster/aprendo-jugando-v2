@@ -7,13 +7,14 @@
         <v-col
             v-for="item in images"
             :key="item.id"
-            class="background"
-            :cols="cols"
+            :cols="$vuetify.breakpoint.xs ? '4' : '3'"
         >
           <v-img
+              @mouseover="imageAnimated = true"
+              @mouseleave="imageAnimated = false"
               :src="item.url"
-              aspect-ratio="1"
-              :class="{'paint': item.selected}"
+              :width="$vuetify.breakpoint.xs ? '100' : '250'"
+              :class="{'paint': item.selected, 'slideDownBtn': imageAnimated}"
               v-on:click="
           selectItem(images,item);
           removePainted(item)"
@@ -34,10 +35,12 @@ export default {
   },
   mounted() {
     this.generateSounds()
+    console.log(this.cols)
   },
   data() {
     return {
-      sounds: []
+      sounds: [],
+      imageAnimated: false
     }
   },
   methods: {
@@ -80,5 +83,47 @@ export default {
 }
 .background{
   background-color: burlywood;
+}
+
+@keyframes slideDownBtn {
+  0% {
+    transform: translateY(-100%);
+  }
+  50%{
+    transform: translateY(8%);
+  }
+  65%{
+    transform: translateY(-4%);
+  }
+  80%{
+    transform: translateY(4%);
+  }
+  95%{
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slideDownBtn {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+  50%{
+    -webkit-transform: translateY(8%);
+  }
+  65%{
+    -webkit-transform: translateY(-4%);
+  }
+  80%{
+    -webkit-transform: translateY(4%);
+  }
+  95%{
+    -webkit-transform: translateY(-2%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
 }
 </style>
