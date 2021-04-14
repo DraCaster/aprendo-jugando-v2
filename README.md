@@ -14,8 +14,6 @@ _Los juegos educativos digitales pueden servir mucho más que para mero entreten
 * [CSS]()  <code><img height="20" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"></code>
 
 
-```
-
 ## En el desarrollo del software se utilizó:    🔧
 
 * [Propuesta DALE!](http://www.propuestadale.com) - Imagenes
