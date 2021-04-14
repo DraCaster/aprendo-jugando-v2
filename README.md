@@ -46,7 +46,5 @@ _Nosotros no somos autores de Propuesta DALE!, ni de los cuadernillos. Nosotros 
 
 _En trabajos futuros se abordarán los demás niveles del cuadernillo._
 
-_Diseño, desarrollo, documentación._
 
-* **Luján Rojas** - [Email](lujanrojas.informatica@gmail.com)
-* **Jeremías Cortes** - [Email](jerec_11@yahoo.com.ar)
+
