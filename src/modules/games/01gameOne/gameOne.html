@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="../../../styles/style.css"/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../../styles/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<nav id="nav">
+</nav>
+<div class="row">
+    <div class="col s4">
+        <h2>&iquest;QUE VOY A DECIR?<</h2>
+    </div>
+    <div class="col s4">
+        <img id="help-sound-j1" class="helpSound pulse"
+             src="../../../assets/images/others/helpsound.svg"
+             onclick="
+          playSound('../../../assets/sounds/gameTitles/game-one.wav');
+          removeAnimation('help-sound-j1','pulse');
+          hideElement('help-j1-0');
+          viewElement('help-j1-1');
+          animationElement('help-j1-1','slideRightBtn')"/></div>
+    <div class="col s4"> <img id="help-j1-0" class="helpPointer slideLeftBtn" src="../assets/img/pointerleft.png" /></div>
+</div>
+
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="../../../js/materialize.min.js">
+</script>
+<script type="text/javascript" src="../../../js/functions.js"></script>
+<script>
+    generateMenuToolbar("index.html","activities.html")
+</script>
+</body>
+
+</html>
