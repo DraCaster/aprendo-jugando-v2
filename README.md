@@ -8,30 +8,12 @@ _Los juegos educativos digitales pueden servir mucho más que para mero entreten
 
 ##Este proyecto fue construido con🛠️
 
-
-* [Vue.js](https://vuejs.org)
 * [NodeJS](https://nodejs.org/es/) <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>
 * [Javascript](https://www.javascript.com) <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
 * [HTML5]()  <code><img height="20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png"></code>
 * [CSS]()  <code><img height="20" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"></code>
-  
-## Para ejecutar el proyecto se debe
 
-### Instalar dependencias con
-```
-npm install
-```
 
-### Levantar el proyecto
-```
-npm run serve
-```
-
-## Otros comandos
-
-###Construir el proyecto para producción
-```
-npm run build
 ```
 
 ## En el desarrollo del software se utilizó:    🔧
